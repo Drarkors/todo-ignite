@@ -3,8 +3,6 @@ import { SVGAttributes } from "react";
 function Logo(props: SVGAttributes<SVGElement>) {
   return (
     <svg
-      // width={126}
-      // height={48}
       viewBox="0 0 126 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

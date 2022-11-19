@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "./SVGs/Logo";
 
 export function Header() {
   return (

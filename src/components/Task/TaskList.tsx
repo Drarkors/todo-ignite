@@ -1,3 +1,5 @@
+import EmptyList from "../SVGs/EmptyList";
+import { Text } from "../Text";
 import { Task, TaskCard } from "./TaskCard";
 
 export interface TaskListProps {
@@ -43,6 +45,17 @@ export function TaskList(props: TaskListProps) {
           onDeleteTask={handleDeleteTask}
         />
       ))}
+      {props.tasks.length === 0 && (
+        <div className="flex flex-col items-center justify-center my-auto">
+          <EmptyList className="text-gray-300 w-14 h-14" />
+          <Text size="lg" className="font-bold mt-5 text-gray-300">
+            Você ainda não tem tarefas cadastradas
+          </Text>
+          <Text size="lg" className="text-gray-300">
+            Crie tarefas e organize seus itens a fazer
+          </Text>
+        </div>
+      )}
     </div>
   );
 }
